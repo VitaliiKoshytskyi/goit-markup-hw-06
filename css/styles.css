@@ -187,7 +187,9 @@ img {
 
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   width: 696px;
 }
 .button {
@@ -205,7 +207,6 @@ img {
   padding: 10px 32px;
   min-width: 216px;
   border: 0px;
-  margin-top: 30px;
 
   transition: background-color var(--trns);
 }
@@ -475,6 +476,7 @@ img {
 }
 .footer-nav-right {
   margin-left: 70px;
+  margin-right: 93px;
 }
 .footer-list-right {
   display: flex;
@@ -520,7 +522,8 @@ img {
   color: var(--secondary-text-color);
   text-decoration: none;
 }
-.footer-title-right {
+.footer-title-right,
+.footer-title-signup {
   margin-top: 0;
   font-style: normal;
   font-weight: 700;
@@ -530,6 +533,30 @@ img {
   text-transform: uppercase;
   margin-bottom: 20px;
   color: #ffffff;
+}
+.footer-signup-form {
+  display: flex;
+}
+.footer-signup-btn {
+  display: flex;
+  margin-left: 12px;
+  width: 200px;
+  padding: 10px 28px;
+}
+.footer-signup-icon {
+  margin-left: 10px;
+  fill: var(--secondary-text-color);
+}
+.footer-nav-input {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: 1px solid transparent;
 }
 
 /* PORTFOLIO */
@@ -701,7 +728,7 @@ img {
   width: 528px;
   height: 581px;
   background-color: var(--secondary-text-color);
-  padding: 8px;
+  padding: 40px;
 
   transition: transform var(--trns);
 }
@@ -719,4 +746,134 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-left: auto;
   padding: 0;
+  transition: fill var(--trns), cursor var(--trns);
+}
+.backdrop-close-button:hover {
+  fill: var(--accent-color);
+  cursor: pointer;
+}
+
+/* FORM */
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+  margin-bottom: 12px;
+}
+.form__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form__input {
+  padding: 11px 10px 11px 30px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--trns), cursor var(--trns);
+  outline: 1px solid transparent;
+}
+.form__input:hover,
+.form__input:focus {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+.form__input:hover + .form-icon,
+.form__input:focus +.form-icon {
+  fill: var(--accent-color);
+  
+}
+.label-name {
+  margin-bottom: 4px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translate(-50% -50%);
+  transition: fill var(--trns);
+}
+
+.form-textarea {
+  resize: none;
+  height: 120px;
+}
+
+.input-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+.input-checkbox:checked + .label-checkbox .checkbox-custom{
+ fill: var(--secondary-text-color);
+background-color: var(--accent-color);
+border-radius: 2px;
+border: none;
+}
+.label-checkbox {
+  display: flex;
+}
+.checkbox-custom {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 7px;
+fill: transparent;
+border: 2px solid var(--primary-text-color);
+border-radius: 2px;
+width: 16px;
+height: 15px;
+
+transition: fill var(--trns),background-color var(--trns);
+
+
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-button {
+  display: block;
+margin-top: 30px;
+margin-left: auto;
+margin-right: auto;
+}
+.checkbox-text-start {
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+.checkbox-link {
+ 
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #2196F3;
+}
+.form__label::placeholder {
+  font-size: 12px;
+    line-height: 1.16px;
+    letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
